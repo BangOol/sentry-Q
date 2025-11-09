@@ -8,18 +8,18 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "users") // [cite: 39]
+@Table(name = "users") 
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id") // [cite: 44]
+    @Column(name = "user_id") 
     private Long id;
 
-    @Column(nullable = false, unique = true) // [cite: 45]
-    private String email; // [cite: 45]
+    @Column(nullable = false, unique = true)
+    private String email;
 
-    private String username; // [cite: 46]
+    private String username;
     
-    // (문서에 따라 기타 정보는 생략) [cite: 47]
+    
 }
