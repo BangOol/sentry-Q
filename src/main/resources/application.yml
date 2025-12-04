@@ -1,35 +1,9 @@
 spring:
-  # 1. RDBMS (H2 또는 MySQL)
-  datasource:
-    url: jdbc:h2:mem:sentryqdb  # (개발용 H2 인메모리 DB)
-    # url: jdbc:mysql://localhost:3306/sentryq
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-    # driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: thunder  
-
-  jpa:
-    hibernate:
-      ddl-auto: create  # (개발용: 시작 시 테이블 자동 생성)
-    show-sql: true      # (JPA 실행 SQL 로그)
-    properties:
-      hibernate:
-        format_sql: true
-
-  # 2. Redis (고속 동시성 제어)
+  # Redis (고속 동시성 제어)
   data:
     redis:
       host: localhost
       port: 6379
-
-  # 3. RabbitMQ (메시지 큐)
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
 
 # (기타: 서버 포트 등)
 server:
