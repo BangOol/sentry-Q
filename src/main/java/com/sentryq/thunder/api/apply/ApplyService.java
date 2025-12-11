@@ -33,11 +33,9 @@ public class ApplyService {
             throw new IllegalStateException("Redis execution failed");
         }
 
-        switch (result.intValue()) {
-            case 0 :
-                return true;
-            default :
-                return false;
-        }
+        return switch (result.intValue()) {
+            case 0 -> true;
+            default -> false;
+        };
     }
 }
