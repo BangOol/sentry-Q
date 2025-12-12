@@ -1,6 +1,7 @@
 package com.sentryq.thunder.api.apply;
 
-import com.sentryq.thunder.api.utils.RedisKeyHelper;
+import com.sentryq.thunder.domain.event.service.ApplyService;
+import com.sentryq.thunder.global.config.RedisKeyHelper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
