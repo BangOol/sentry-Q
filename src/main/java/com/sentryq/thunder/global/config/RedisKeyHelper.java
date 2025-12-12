@@ -1,4 +1,4 @@
-package com.sentryq.thunder.api.utils;
+package com.sentryq.thunder.global.config;
 
 public class RedisKeyHelper {
 
