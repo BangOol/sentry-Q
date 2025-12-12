@@ -1,4 +1,4 @@
-package com.sentryq.thunder.api.script;
+package com.sentryq.thunder.api.scripts;
 
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -62,7 +62,7 @@ public class RedisScriptTest {
         String remainingStock = redisTemplate.opsForValue().get(stockKey);
         assertThat(remainingStock).isEqualTo("99");
 
-        // 검증 2 : 유저가 Set에 등록되었는가?
+        // 검증 2 : 유저가 Set에 등록되었는가? 
         Boolean isMember = redisTemplate.opsForSet().isMember(applySetKey, userId);
         assertThat(isMember).isTrue();
     }
@@ -108,5 +108,6 @@ public class RedisScriptTest {
         // 검증 : 유저가 set에 추가되지 않는가?
         Boolean isMember = redisTemplate.opsForSet().isMember(applySetKey, userId);
         assertThat(isMember).isFalse();
+
     }
 }

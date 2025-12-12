@@ -4,6 +4,20 @@ spring:
     redis:
       host: localhost
       port: 6379
+      # password: your_password (필요 시)
+
+      # [Production: Cluster]
+      # 운영 환경에서는 아래 주석을 해제하고 cluster 정보를 입력합니다.
+      # cluster:
+      #   nodes:
+      #     - 10.0.0.1:6379
+      #     - 10.0.0.2:6379
+      #   max-redirects: 3
+
+logging:
+  level:
+    # Redis 명령어 실행 로그를 보고 싶을 때 디버그 레벨로 조정 (성능 주의)
+    org.springframework.data.redis: INFO
 
 # (기타: 서버 포트 등)
 server:
